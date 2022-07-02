@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BoxId } from './BoxId';
 import Modal from 'react-modal';
+import { setArray } from '../helpers/setArray';
 
 const customStyles = {
   content: {
@@ -35,6 +36,7 @@ export const OneHundredProblemPage = () => {
   const setApp = () => {
     const initialNum = Math.floor(Math.random()*101+1);
     setInitial(initialNum)
+    setArray()
   }
   
   const resTart = () => {
