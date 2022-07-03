@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   background-color: #0B2434;
@@ -15,7 +16,7 @@ body {
 main {
   background-color: #F5F5F5;
   margin: 50px;
-  height: 88vh;
+  /* height: 92vh; */
   max-width: 200vh;
   border-radius: 5px;
   padding: 50px;
@@ -29,6 +30,44 @@ main {
   display: grid;
   grid-template: auto auto / repeat(20, 1fr);
   gap: 15px;
+}
+@media (min-width: 1825px){
+  .top {
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 965px) and (max-width: 1825px)  {
+  .top {
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-container {
+    grid-template: auto auto / repeat(10, 1fr);
+  }
+}
+@media (min-width: 540px) and (max-width: 965px)  {
+  .top {
+    display: flex;
+    flex-direction: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-container {
+    grid-template: auto auto / repeat(5, 1fr);
+  }
+}
+@media (min-width: 300px) and (max-width: 540px)  {
+  .btn-primary {
+    margin-left: 70px;
+  }
+  .box-container {
+    grid-template: auto auto / repeat(2, 1fr);
+  }
 }
 
 .box-face {
@@ -49,7 +88,6 @@ main {
   border-radius: 5px;
   margin: 12px;
   width: 95%;
-  /* padding-left: 12%; */
   color: #5035FF;
   cursor: pointer;
   box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.15);
@@ -70,13 +108,6 @@ main {
 .box-title {
   font-size: 1.2rem;
   margin: 5px;
-}
-
-.top {
-  display: flex;
-  flex-direction: center;
-  justify-content: center;
-  align-items: center;
 }
 
 .title {

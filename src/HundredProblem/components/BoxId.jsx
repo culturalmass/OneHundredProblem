@@ -1,16 +1,16 @@
-import { Box } from "./Box";
-import { startingArray } from "../helpers/setArray";
+import { Box } from "./";
+import { startingArray } from "../../helpers/setArray";
 
-export const BoxId = (props) => {
+export const BoxId = ({passCounter}) => {
 
   const useArray = JSON.parse(localStorage.getItem("BoxArray"));
 
-  const onCounter = (props) => {
-    pasingCounter(props)
+  const onCounter = (onCount) => {
+    pasingCounter(onCount)
   };
 
-  const pasingCounter = (value) => {
-    props.passCounter(value)
+  const pasingCounter = (onCount) => {
+    passCounter(onCount)
   }; 
 
   return (

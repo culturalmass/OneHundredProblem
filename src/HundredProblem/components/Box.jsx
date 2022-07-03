@@ -1,11 +1,11 @@
 import {useState} from "react";
 
-export const Box = (props) => {
+export const Box = ({onCounter, position, value}) => {
 
   const [current, setCurrent] = useState(false)
 
   const onChange = (event) => {
-    props.onCounter(event.target.innerText)
+    onCounter(event.target.innerText)
     if (current === false) {
       setCurrent(true)
     } else {
@@ -17,14 +17,14 @@ export const Box = (props) => {
   <>
     <div className="box-face" >
       <h2 className="box-title">
-        {props.position === "" ? "" : props.position+1 }
+        {position === "" ? "" : position+1 }
       </h2>
       <button 
         disabled={current ? true : false}
         onClick={onChange}
         className={current ? "box-num_black" : "box-num_white" }
       >
-        {props.value}
+        {value}
       </button>
     </div>
   </>
