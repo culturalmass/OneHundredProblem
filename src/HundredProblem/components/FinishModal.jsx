@@ -19,14 +19,15 @@ const customStyles = {
 
 Modal.setAppElement('#root');
 
-export const FinishModal = ({currentposition, initial=0, counter=0, resTart, isOpen}) => {
+export const FinishModal = ({currentposition, initial=0, counter=0, onReset, isOpen, onCloseModal}) => {
 
   return(
 
       <Modal 
         isOpen={isOpen}
+        onRequestClose={onCloseModal}
         style={customStyles}
-        contentLabel="winner_window"
+        contentLabel="finish_window"
         ariaHideApp={false}
       >
         {
@@ -39,7 +40,7 @@ export const FinishModal = ({currentposition, initial=0, counter=0, resTart, isO
             <FailureText />
           : ''
         }
-      <button className="btn-primary_modal" onClick={resTart} >Intentar de nuevo</button> 
+      <button className="btn-primary_modal" onClick={onReset} >Intentar de nuevo</button> 
     </Modal>
     )
 }

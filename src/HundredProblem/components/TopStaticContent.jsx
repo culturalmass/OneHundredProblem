@@ -5,8 +5,8 @@ export const TopStaticContent = ({initial}) => {
   return (
     <>
         <h1>El problema de los 100 prisioneros</h1>
-        <span className="text_1">...En este problema, 100 prisioneros numerados deben encontrar sus propios
-        números en uno de las 100 cajas para poder sobrevivir. Las reglas establecen que
+        <span className="text_1">...En este problema, 100 prisioneros deben encontrar su propio numero
+        en una de las 100 cajas para poder sobrevivir. Las reglas establecen que
         cada recluso puede abrir solo 50 cajas y no puede comunicarse con otros reclusos.
         A primera vista, la situación parece desesperada, pero una estrategia inteligente ofrece
         a los prisioneros una posibilidad real de supervivencia. </span>

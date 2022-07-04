@@ -1,7 +1,7 @@
 import { Box } from "./";
 import { startingArray } from "../../helpers/setArray";
 
-export const BoxId = ({passCounter}) => {
+export const BoxId = ({passCounter, initial, setIsOpen}) => {
 
   const useArray = JSON.parse(localStorage.getItem("BoxArray"));
 
@@ -22,6 +22,8 @@ export const BoxId = ({passCounter}) => {
             position={index} 
             value={value}
             onCounter={onCounter}
+            initial={initial}
+            setIsOpen={setIsOpen}
           />
         ) : 
           useArray.map((value, index) => 
@@ -30,9 +32,14 @@ export const BoxId = ({passCounter}) => {
             position={index} 
             value={value}
             onCounter={onCounter}
+            initial={initial}
+            setIsOpen={setIsOpen}
           />
         )
       }
     </>
   )
 }
+
+
+
