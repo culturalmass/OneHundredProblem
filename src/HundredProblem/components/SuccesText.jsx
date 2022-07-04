@@ -12,7 +12,7 @@ export const SuccesText = ({counter}) => {
             />
             <h1 className="title_modal_1" >Juego Finalizado</h1>
             <h2 className="title_modal_2">Ganaste</h2>
-            <span className="text_1" >Felicidades lograste encontrar tu numero en {counter} intentos, ahora intentalo de nuevo 99 veces mas sin fallar para liberar a todos los prisioneros.</span> 
+            <span className="text_1" >Felicidades lograste encontrar tu numero en {counter-1} intentos, ahora intentalo de nuevo 99 veces mas sin fallar para liberar a todos los prisioneros.</span> 
         </> 
     )
 }
