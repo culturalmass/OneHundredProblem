@@ -5,12 +5,12 @@ import { setArray } from '../helpers/setArray';
 export const OneHundredProblemPage = () => {
 
   const [initial, setInitial] = useState("00")
-  const [counter, setCounter] = useState(1)
+  const [counter, setCounter] = useState(0)
   const [currentposition, setCurrentposition] = useState("")
   const [isOpen, setIsOpen] = useState(false);
 
   const setApp = () => {
-    const initialNum = Math.floor(Math.random()*101+1);
+    const initialNum = Math.floor(Math.random()*100+1);
     setInitial(initialNum)
     setArray()
   }
@@ -23,7 +23,7 @@ export const OneHundredProblemPage = () => {
     setCounter(counter+1)
     setCurrentposition(onCount)
       //_______final_game_state__________//
-    if((onCount === initial.toString()) || (counter >= 50) ) {
+    if((onCount === initial.toString()) || (counter >= 49) ) {
       setIsOpen(true)
       }
     }
@@ -44,7 +44,7 @@ export const OneHundredProblemPage = () => {
           <h2 className="title" >Busca el numero { initial}</h2>
           <button className="btn-primary" onClick={resTart} >Reiniciar</button>
         </div>
-        <h2 className="count_text" >Intentos restantes {51 - counter}</h2>
+        <h2 className="count_text" >Intentos restantes {50 - counter}</h2>
         <div className="box-container">
           <BoxId passCounter={passCounter}  />
         </div>

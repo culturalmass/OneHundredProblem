@@ -34,7 +34,7 @@ export const FinishModal = ({currentposition, initial=0, counter=0, resTart, isO
 
             <SuccesText counter={counter}/>
 
-          : (counter >= 50) ?
+          : (counter >= 49) ?
 
             <FailureText />
           : ''
